@@ -1,0 +1,24 @@
+# permissions for end users to edit cars.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: car-editor-role
+rules:
+- apiGroups:
+  - home.lanford.io
+  resources:
+  - cars
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - home.lanford.io
+  resources:
+  - cars/status
+  verbs:
+  - get

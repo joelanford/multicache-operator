@@ -1,0 +1,7 @@
+apiVersion: home.lanford.io/v1
+kind: Car
+metadata:
+  name: car-sample
+spec:
+  # Add fields here
+  foo: bar
